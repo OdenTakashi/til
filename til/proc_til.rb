@@ -38,3 +38,9 @@ def print_func(arg, &fun)
 end
 
 print_func(4) {|n| n * n} #=> 16
+
+#ブロックをオブジェクト化する
+lambda{|n| n * n}
+proc {|n| n * n}
+Proc.new {|n| n * n}
+->n {|n| n * n}
