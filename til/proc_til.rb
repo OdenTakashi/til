@@ -25,3 +25,16 @@ sq(4) #=> NoMethodError (undefined method `sq' for main:Object)
 sq.call(4) #=> 16
 sq[3] #=> 9
 sq.(3) #=> 9
+
+# ブロックを引数として渡す
+def print_func(arg, &fun)
+    puts fun.call(arg)
+end
+
+print_func(4) {|n| n * n} #=> 16
+
+def print_func(arg, &fun)
+    puts yield(arg)
+end
+
+print_func(4) {|n| n * n} #=> 16
