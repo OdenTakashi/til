@@ -44,3 +44,12 @@ lambda{|n| n * n}
 proc {|n| n * n}
 Proc.new {|n| n * n}
 ->n {|n| n * n}
+
+square = ->n {|n| n * n}
+square.call(3) #=> 9
+
+def print_func(arg, fun)
+    puts fun.call(arg)
+end
+
+print_func(4, square) #=> 16
