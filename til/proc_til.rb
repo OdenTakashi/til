@@ -77,3 +77,14 @@ end
 a #=> Hello
 b #=> Hello
 c #=> Hello
+
+# カリー化
+log = -> (level, message) { puts "#{level} #{message}" }.curry
+
+debug = log.('DEBUG')
+info = log.('INFO')
+error = log.('ERROR')
+
+debug.('This is test') #=> [DEBUG] This is test.
+info.('Fine today') #=> [INFO] Fine today.
+error.('Rainig') #=> [ERROR] Raining
