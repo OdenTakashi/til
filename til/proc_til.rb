@@ -53,3 +53,17 @@ def print_func(arg, fun)
 end
 
 print_func(4, square) #=> 16
+
+# &にブロックが渡されるとProcオブジェクトに変更される
+def print_func(arg, &fun)
+    puts fun.class
+end
+
+print_func(4) {|n| n * n} #=> >>Proc
+
+%w(charlie liz george).map(&:capitalize) # => ["Charlie", "Liz", "George"]
+# &にオブジェクトが代入される時に `to_proc`が呼ばれる
+
+#sendメソッド
+obj = ->obj{obj.send(:send)} #<Proc:0x00007fde1912cc40 (irb):8 (lambda)>
+
