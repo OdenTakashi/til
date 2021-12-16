@@ -25,3 +25,8 @@ p params
 
 ruby sample.rb -a 
 # {a: true}
+
+# Dir.glob
+# 第2引数のデフォルト値は0になっている
+
+# 変数の出自がわかるようにする
