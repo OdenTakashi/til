@@ -5,6 +5,7 @@ def fibonacci(n)
 	fibonacci_array[0] = fibonacci_array[1] = 1
 	for i in 2 .. n  do
 		tmp = fibonacci_array[i - 1] + fibonacci_array[i - 2]
+		binding.irb
 		fibonacci_array.push(tmp)
 	end
 
