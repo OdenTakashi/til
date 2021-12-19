@@ -14,3 +14,12 @@ end
 
 n = gets.chomp("\n").to_i
 fibonacci(n)
+
+# for文
+for 変数 in オブジェクト do
+  実行する処理1
+  実行する処理2
+end
+
+#rubyではあまり使わないらしい。。。。
+#each, timesを使うことが多い
