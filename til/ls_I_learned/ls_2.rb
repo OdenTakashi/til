@@ -52,3 +52,7 @@ b = true
 
 a.tap{ |v| break v.reverse if b }
 #=> [5, 4, 3, 2, 1]
+
+# yield_self(then)
+3.next.then {|x| x**x }.to_s             # => "256"
+"my string".yield_self {|s| s.upcase }   # => "MY STRING"
