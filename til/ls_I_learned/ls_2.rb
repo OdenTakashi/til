@@ -56,3 +56,12 @@ a.tap{ |v| break v.reverse if b }
 # yield_self(then)
 3.next.then {|x| x**x }.to_s             # => "256"
 "my string".yield_self {|s| s.upcase }   # => "MY STRING"
+base_filesnames = Dir.glob('*', base: directory)
+
+class Object
+  def yield_self
+    yield self
+  end
+end
+# yield_selfだと実行結果（つまり受け取ったブロックの返り値）が返って、
+# tapはブロックを実行した後のレシーバが返ります。
