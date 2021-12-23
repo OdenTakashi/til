@@ -57,3 +57,9 @@ puts res
 sym = %s(Ruby)
 p sym
 #=> :Ruby
+
+# `&.` について
+# レシーバがnilではない場合にメソッドを呼び出す 
+a = nil
+a&.to_s
+#=> nil
