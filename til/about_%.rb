@@ -57,3 +57,6 @@ puts res
 sym = %s(Ruby)
 p sym
 #=> :Ruby
+
+# `&.` について
+a = nil
