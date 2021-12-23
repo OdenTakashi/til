@@ -63,5 +63,11 @@ class Object
     yield self
   end
 end
+
+# a がnilじゃない時ブロックないの処理を返り値とできる。
+a = true 
+b = "Test"
+filesname = a&.yield_self{ b.reverse }
+
 # yield_selfだと実行結果（つまり受け取ったブロックの返り値）が返って、
 # tapはブロックを実行した後のレシーバが返ります。
