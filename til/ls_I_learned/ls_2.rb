@@ -77,4 +77,8 @@ a = true
 b = "Test"
 filesname = a&.then{ b.reverse }
 
+# try
+# そして実行するオブジェクトがnilの場合でもエラーを起こしません
+# メソッドがない場合でもnilを返します
+
 
