@@ -82,3 +82,5 @@ filesname = a&.then{ b.reverse }
 # メソッドがない場合でもnilを返します
 
 
+# try!メソッドは先ほど説明したtryメソッドと違って、存在しないメソッドを指定した場合にはNoMethodErrorを起こしてしまいます。
+
