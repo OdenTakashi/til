@@ -64,7 +64,7 @@ class Object
   end
 end
 
-filesnames = base_filesnames.then { |b| params[:r] ? b.reverse : b  }
+filesnames = base_filesnames.then { |b| params[:r] ? b.reverse : b}
 
 # a がnilじゃない時ブロックないの処理を返り値とできる。
 a = true 
@@ -93,3 +93,4 @@ filesname = a&.then{ b.reverse }
 [1, 2, 3].map{ |i| i*2 }
 #  => [2, 4, 6]
 # 各要素をブロックで評価された、新しいArrayが返ります。
+# prc = Proc.new {|n| n.to_i}
