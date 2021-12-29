@@ -94,3 +94,8 @@ filesname = a&.then{ b.reverse }
 #  => [2, 4, 6]
 # 各要素をブロックで評価された、新しいArrayが返ります。
 # prc = Proc.new {|n| n.to_i}
+
+if 条件式 then
+  条件式が真の時に実行する処理1
+  条件式が真の時に実行する処理2
+end
