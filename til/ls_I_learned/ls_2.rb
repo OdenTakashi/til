@@ -71,6 +71,12 @@ a = true
 b = "Test"
 filesname = a&.yield_self{ b.reverse }
 
+class Object
+  def yield_self(&block)
+    yield self
+  end
+end
+
 # yield_selfだと実行結果（つまり受け取ったブロックの返り値）が返って、
 # tapはブロックを実行した後のレシーバが返ります。
 
