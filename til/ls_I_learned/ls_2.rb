@@ -105,3 +105,17 @@ if 条件式 then
   条件式が真の時に実行する処理1
   条件式が真の時に実行する処理2
 end
+
+hash = {}
+#  => {}
+hash.then{ |h| h[:value] = 42 }
+#  => 42
+hash
+#  => {:value=>42}
+
+hash = {}
+#  => {}
+hash.tap{ |h| h[:value] = 42 }
+#  => {:value=>42}
+hash
+#  => {:value=>42}
