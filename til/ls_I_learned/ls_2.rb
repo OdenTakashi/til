@@ -119,3 +119,17 @@ hash.tap{ |h| h[:value] = 42 }
 #  => {:value=>42}
 hash
 #  => {:value=>42}
+
+# ブロックあり
+execute_yield do
+  puts "Hello World"
+end
+# ブロックがあるときは、ブロックのputs "Hello World"が実行される
+Hello World
+=> nil
+
+# ブロックなし
+execute_yield
+# No block!!が表示される
+No block!!
+=> nil
