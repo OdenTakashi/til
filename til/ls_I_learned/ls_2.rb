@@ -133,3 +133,20 @@ execute_yield
 # No block!!が表示される
 No block!!
 => nil
+
+"foo".tap{|s| puts s + s}
+foofoo
+# => "foo"
+
+"foo".tap{|s| break s + s}
+# => "foofoo"
+
+p [1, 2, 3].yield_self { |myself|
+  myself.map { |it| it + myself.size }
+}
+# => [4, 5, 6]
+
+p (1..10).select(&:even?).yield_self { |myself|
+  myself + myself
+}
+# => [2, 4, 6, 8, 10, 2, 4, 6, 8, 10]
