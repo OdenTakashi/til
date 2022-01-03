@@ -150,3 +150,16 @@ p (1..10).select(&:even?).yield_self { |myself|
   myself + myself
 }
 # => [2, 4, 6, 8, 10, 2, 4, 6, 8, 10]
+
+message = "ruby"
+> message.then(&:upcase)
+         .then(&:reverse)
+> message
+=> "YBUR"
+
+### 参考: tapはブロックの結果をレシーバに反映させないので変化なし
+> message = "ruby"
+> message.tap(&:upcase)
+         .tap(&:reverse)
+> message
+=> "ruby"
