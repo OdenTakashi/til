@@ -1,4 +1,4 @@
-stat = File::Stat.new($0)
+stat = File::Stat.new("#{File.expand_path("lib")}")
 # puts stat.mtime.to_s.slice!(6..15)
 # p stat.mode.to_s(8)
 # -rw-r--r--
@@ -17,9 +17,10 @@ user_name  = Etc.getpwuid(user_id).name
 group_id   = Process.gid
 group_name = Etc.getgrgid(group_id).name
 
-puts "#{stat.mode.to_s(8)} #{stat.nlink} #{user_name} #{group_name}  #{File.size('ls_4.rb')} #{stat.mtime.to_s.slice!(6..15)}"
+puts "#{stat.mode.to_s(8)} #{stat.nlink} #{user_name} #{group_name}  #{stat.mtime.to_s.slice!(6..15)}"
 
 #=> kodamanaoki
 #=> staff
 
 # 全てのプロセスにはプロセスIDというものが存在している
+p File.expand_path("lib")
