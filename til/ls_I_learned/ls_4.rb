@@ -123,3 +123,6 @@ main
   #ary = [1,2,3]
   #ary.prepend("hello")
   #p ary => ["hello", 1 , 2, 3]
+
+  #シンボル
+  #文字列の皮を被った数値
